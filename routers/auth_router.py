@@ -34,8 +34,7 @@ def signup(user: UserRegister, db: Session = Depends(get_db)):
 #login router   
 @router.post("/login", response_model=TokenResponse,
                  summary="User Login",
-                 description="Authenticates a user and returns a JWT access token.
-                 Use registered email in username section.",
+                 description="Authenticates a user and returns a JWT access token.Use registered email in username section.",
                   response_description="JWT Access Token.")
 def login(
     form_data: OAuth2PasswordRequestForm = Depends(),
